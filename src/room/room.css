@@ -1,0 +1,41 @@
+
+.conatiner{
+    width:175px;
+    box-sizing: border-box;
+    border: 1px solid;
+    height: 100px;
+    margin: 10px;
+    float:left;
+}
+
+.con_unsel{
+    width:175px;
+    box-sizing: border-box;
+    border: 1px solid;
+    height: 100px;
+    margin: 10px;
+    float:left;
+    background-color:gainsboro;
+}
+
+.row{
+    display: flex;
+}
+.header{
+    background-color: grey;
+    margin: 0;
+}
+.column {
+    float: left;
+    padding: 10px;
+    width: 25%;
+  }
+.chkBox{
+    padding-right: 20px;
+}
+.chk{
+    padding-top: 5px;
+}
+.enabledChk{
+    font-weight: bold;
+}

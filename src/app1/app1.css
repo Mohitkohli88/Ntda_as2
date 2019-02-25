@@ -1,0 +1,9 @@
+.materPanel{
+    padding: 10px;
+    display: flex;
+}
+.btn{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 20px;
+}
