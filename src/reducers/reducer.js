@@ -2,7 +2,7 @@ import { types } from '../app1/action'
 
 const init={
     rooms:[],
-
+    emp:{},
 }
 //
 export default (state=init, action) => {
@@ -31,7 +31,12 @@ export default (state=init, action) => {
                 ...state,
                 rooms,
             }
-        }    
+        }
+        case types.getEmp:
+        return{
+            ...state,
+            emp:action.emp,
+        }
         case types.select: 
             return{
                 ...state,
@@ -43,36 +48,36 @@ export default (state=init, action) => {
                 })
             }
         case types.unselect: 
-                return{
-                    ...state,
-                    rooms: state.rooms.map((room)=>{
-                        if(room.id !== 1 && action.id <= room.id) {
-                            room.isDefaultDisable=true
-                        }
-                        return room
-                    })
-                }
+            return{
+                ...state,
+                rooms: state.rooms.map((room)=>{
+                    if(room.id !== 1 && action.id <= room.id) {
+                        room.isDefaultDisable=true
+                    }
+                    return room
+                })
+            }
         case types.addChild: 
-                return{
-                    ...state,
-                    rooms: state.rooms.map((room)=>{
-                        if(room.id === action.id) {
-                            room.child = action.value
-                        }
-                        return room
-                    })
-                }
+            return{
+                ...state,
+                rooms: state.rooms.map((room)=>{
+                    if(room.id === action.id) {
+                        room.child = action.value
+                    }
+                    return room
+                })
+            }
         case types.addAdult: 
-                return{
-                    ...state,
-                    rooms: state.rooms.map((room)=>{
-                        if(room.id === action.id) {
-                            room.adult = action.value
-                        }
-                        return room
-                    })
-                }
+            return{
+                ...state,
+                rooms: state.rooms.map((room)=>{
+                    if(room.id === action.id) {
+                        room.adult = action.value
+                    }
+                    return room
+                })
+            }
         default:
-        return state
+            return state
     }
 }

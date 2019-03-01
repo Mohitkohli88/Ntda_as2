@@ -25,7 +25,12 @@ class Room extends React.Component{
         return(
             <div className={!isDefaultDisable? 'conatiner' :'con_unsel'}>
                 <div className='header'>
-                <span className={ !isDefaultDisable? 'enabledChk':''}>{isRoomEnableChk && <input type='checkbox' checked={!isDefaultDisable} className='chkBox' onChange={this.oncheck}/>}{roomName} </span> </div>
+                    <span className={ !isDefaultDisable? 'enabledChk':''}>
+                        {isRoomEnableChk && 
+                            <input type='checkbox' checked={!isDefaultDisable} className='chkBox' onChange={this.oncheck}/>
+                        }{roomName} 
+                    </span> 
+                </div>
                 <div classname="row">
                     <div className="column">
                         <div>

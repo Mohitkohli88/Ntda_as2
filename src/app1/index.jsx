@@ -31,6 +31,7 @@ class Rooms extends React.Component{
         this.props.addChild(id, val)
     }
     submit(){
+        this.props.getServer()
         this.props.onSumit(this.props.rooms)
     }
     render() {
